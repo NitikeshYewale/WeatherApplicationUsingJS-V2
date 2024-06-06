@@ -22,37 +22,8 @@ async function checkWeather(city){
     document.querySelector(".wind h2").innerHTML=data.wind.speed+ "km/hr";
 
     weatherIcon.src="https://openweathermap.org/img/wn/"+data.weather[0].icon+"@2x.png";
-    console.log(weatherIcon.src);
-    // switch(data.weather[0].main ){
-    //     case "Clouds":{
-    //         weatherIcon.src="images/cloudy.png";
-    //         break;
-    //     }
-    //     case "Clear":{
-    //         weatherIcon.src="images/sun.png";
-    //         break;
-    //     }
-    //     case "Rain":{
-    //         weatherIcon.src="images/rainy.jpg";
-    //         break;
-    //     }
-    //     case "Drizzle":{
-    //         weatherIcon.src="images/drizzle.png";
-    //         break;
-    //     }
-    //     case "Mist":{
-    //         weatherIcon.src="images/mist.png";
-    //         break;
-    //     }
-    //     case "Haze":{
-    //         weatherIcon.src="images/haze.png";
-    //         break;
-    //     }
-    //     case 'Snow':{
-    //       weatherIcon.src = "images/snow.png";
-    //       break;
-    //     }
-    // }
+   // console.log(weatherIcon.src);
+
 }
 
 
