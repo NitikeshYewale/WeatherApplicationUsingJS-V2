@@ -6,7 +6,7 @@
   }
   
   .body {
-    background-image: url("/images/home.gif");
+    background-image: url("../images/home.gif");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -137,7 +137,7 @@
   }
   
   .searchInput button{
-    background-image:url("/images/search.png");
+    background-image:url("../images/search.png");
     background-position:center;
     background-size:contain;
     width: 2.2rem;
@@ -167,8 +167,8 @@
   }
   
   .weatherIcon img {
-    max-width: 90%;
-    width: 10rem;
+    max-width: 100%;
+    width: 8rem;
   }
   
   .weatherDetails .temp{
