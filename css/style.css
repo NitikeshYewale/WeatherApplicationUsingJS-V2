@@ -23,7 +23,7 @@
 }
 
 .indexDiv {
-
+  size: 70%;
   /*background-color: rgb(0,0,0); */
   /* Fallback color */
   background: rgba(255, 255, 255, .1);
@@ -105,17 +105,17 @@ a:focus {
 }
 
 .global {
-  display: flexbox;
+  display: ruby;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  width: 90%;
 }
 
 .mainContainer {
   margin-top: 8px;
   justify-content: center;
   align-items: center;
-  width: 30rem;
+  width: 90%;
+  max-width: 30rem;
   height: auto;
   border-radius: 1rem;
   background: rgba(255, 255, 255, .1);
@@ -295,7 +295,8 @@ image-logo {
 /* 8 day forcast */
 .forecast {
   border-radius: 1rem;
-  width: 30rem;
+  width:80%;
+  max-width: 30rem;
   height: auto;
   justify-content: center;
   align-items: center;
@@ -337,4 +338,18 @@ image-logo {
 
 .day .condition {
   font-weight: bold;
+}
+
+
+
+@media (max-width:600px){
+  .global{
+    width: 100%;
+  }
+  .weatherDetails{
+    width: 90%;
+  }
+  .forecast{
+    width: 90%;
+  }
 }
