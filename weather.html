@@ -8,15 +8,15 @@
 </head>
 
 <body class="body">
-
+<div class="global">
 	<div class="mainContainer">
 		<div  class="searchInput">
 			<input type="text" placeholder="Enter City Name"  id="searchInput" name="city" />
-			<button type="submit" class="searchButton"> </button>
+			<button type="submit" class="searchButton"></button>
         </div>
 		<div class="weatherDetails">
 			<div class="weatherIcon">
-				<img src="" alt="Clouds" id="weather-icon" class="weather-icon">
+				<img src="images/cloudy.png" alt="Clouds" id="weather-icon" class="weather-icon">
 				<h2>clouds 20°C</h2>
 
 				
@@ -27,6 +27,8 @@
 					<strong>city</strong>
 				</div>
 				<div class="date">date</div>
+        <div class="date">Your Date: <span class="systemDate">systemDate</span></div>
+        <div class="description">Description</div>
 			</div>
 			<div class="windDetails">
 				<div class="humidityBox">
@@ -50,6 +52,41 @@
 			</div>
 		</div>
 	</div>
+    <div class="forecast">
+        <div id="day1" class="day" >
+          <span id="date1" class="date" >Monday, June 7</span>
+          <img id="img1" src="https://openweathermap.org/img/wn/10d@2x.png" >
+          <span id="temp1" class="temperature">25°C / 17°C</span>
+          <span id="desc1" class="condition">Heavy intensity rain</span>
+        </div>
+        <div id="day2" class="day" >
+            <span id="date2" class="date" >Monday, June 7</span>
+            <img id="img2" src="https://openweathermap.org/img/wn/10d@2x.png" >
+            <span id="temp2" class="temperature">25°C / 17°C</span>
+            <span id="desc2" class="condition">Heavy intensity rain</span>
+          </div>
+          <div id="day3" class="day" >
+            <span id="date3" class="date" >Monday, June 7</span>
+            <img id="img3" src="https://openweathermap.org/img/wn/10d@2x.png" >
+            <span id="temp3" class="temperature">25°C / 17°C</span>
+            <span id="desc3" class="condition">Heavy intensity rain</span>
+          </div>
+          <div id="day4" class="day" >
+            <span id="date4" class="date" >Monday, June 7</span>
+            <img id="img4" src="https://openweathermap.org/img/wn/10d@2x.png" >
+            <span id="temp4" class="temperature">25°C / 17°C</span>
+            <span id="desc4" class="condition">Heavy intensity rain</span>
+          </div>
+          <div id="day5" class="day" >
+            <span id="date5" class="date" >Monday, June 7</span>
+            <img id="img5" src="https://openweathermap.org/img/wn/10d@2x.png" >
+            <span id="temp5" class="temperature">25°C / 17°C</span>
+            <span id="desc5" class="condition">Heavy intensity rain</span>
+          </div>
+        
+        
+    </div>
+</div>
     <script src="js/script.js"></script>
     <script>
         const input = document.getElementById("searchInput");
@@ -57,66 +94,7 @@
         checkWeather(city);
     </script>
     
-<!-- <Script>
-    const searchBox=document.querySelector(".mainContainer input");
-    const searchBtn=document.querySelector(".mainContainer button");
-    const weatherIcon = document.querySelector(".weather-icon");
 
-const apiKey="76a9b7d307b9f35c1c7487b8b5f9c955";
-const apiUrl="https://api.openweathermap.org/data/2.5/weather?q="
-async function checkWeather(city){
-    const response= await fetch(apiUrl+city+`&appid=${apiKey}`);
-
-    var data = await response.json();
-
-    console.log(data);
-    document.querySelector(".weatherIcon h2").innerHTML= data.weather[0].main +" "+ Math.round((data.main.temp-273.15))+"°C";
-    document.querySelector(".desc strong").innerHTML = data.name;
-    
-    document.querySelector(".date").innerHTML =""+new Date(data.dt);
-
-    document.querySelector(".hu").innerHTML = data.main.humidity+"%";
-
-    document.querySelector(".wind h2").innerHTML=data.wind.speed+ "km/hr";
-
-    
-    switch(data.weather[0].main ){
-        case "Clouds":{
-            weatherIcon.src="images/cloudy.png";
-            break;
-        }
-        case "Clear":{
-            weatherIcon.src="images/sun.png";
-            break;
-        }
-        case "Rain":{
-            weatherIcon.src="images/rainy.jpg";
-            break;
-        }
-        case "Drizzle":{
-            weatherIcon.src="images/drizzle.png";
-            break;
-        }
-        case "Mist":{
-            weatherIcon.src="images/mist.png";
-            break;
-        }
-        case "Haze":{
-            weatherIcon.src="images/haze.png";
-            break;
-        }
-        case 'Snow':{
-          weatherIcon.src = "images/snow.png";
-          break;
-        }
-    }
-}
-checkWeather(searchBox.value);
-searchBtn.addEventListener("click",()=>{
-    checkWeather(searchBox.value);
-});
-checkWeather(city);
-</Script> -->
     
     
 </body>
