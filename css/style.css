@@ -11,10 +11,12 @@
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: cover;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+
   /* Resize the background image to cover the entire container */
   display: flex;
-  height: 140vh;
+  height: auto;
   /* align-items: center; */
   justify-content: center;
 
