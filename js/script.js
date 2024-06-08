@@ -46,11 +46,11 @@ async function checkWeather(city) {
     for (i = 0; i < 41; i++) {
         if (new Date(data5days.list[i].dt * 1000).getDay() !== new Date(previousDate).getDay()) {
             previousDate = data5days.list[i].dt * 1000;
-            document.getElementById("date" + x).innerHTML = new Date(data5days.list[i + 5].dt * 1000).toDateString();
-            document.getElementById("img" + x).src = "https://openweathermap.org/img/wn/" + data5days.list[i + 5].weather[0].icon + "@2x.png";
-            let ls = data5days.list[i + 5].main;
+            document.getElementById("date" + x).innerHTML = new Date(data5days.list[i].dt * 1000).toDateString();
+            document.getElementById("img" + x).src = "https://openweathermap.org/img/wn/" + data5days.list[i].weather[0].icon + "@2x.png";
+            let ls = data5days.list[i].main;
             document.getElementById("temp" + x).innerHTML = Math.round(Math.min(ls.feels_like, ls.feels_like, ls.temp, ls.temp_min, ls.temp_max)) + "°C / " + Math.round(Math.max(ls.feels_like, ls.feels_like, ls.temp, ls.temp_min, ls.temp_max)) + "°C";
-            document.getElementById("desc" + x).innerHTML = data5days.list[i + 5].weather[0].description;
+            document.getElementById("desc" + x).innerHTML = data5days.list[i].weather[0].description;
             x++;
             if (x > 5) break;
 
