@@ -91,7 +91,7 @@
   <script src="js/script.js"></script>
   <script>
     const input = document.getElementById("searchInput");
-    const city = localStorage.getItem("cityName"); localStorage.removeItem("cityName");
+    const city = localStorage.getItem("cityName").trim(); localStorage.removeItem("cityName");
     checkWeather(city);
   </script>
 
